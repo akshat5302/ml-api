@@ -18,4 +18,4 @@ async def scoring_endpoint(item:InputItem):
     df = pd.read_csv('fcast.csv')
     predictions=m.predict(df)
     ans=predictions.iloc[-1]['yhat']
-    return {"predictions":int(ans)}
+    return {"prediction":int(ans)}
